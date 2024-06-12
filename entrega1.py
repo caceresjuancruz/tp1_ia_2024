@@ -53,9 +53,9 @@ class LlenadoDeFrascosProblem(SearchProblem):
 def jugar(frascos, dificil):
     problem = LlenadoDeFrascosProblem(frascos)
     if dificil:
-        result = greedy(problem, graph_search=True)
+        result = greedy(problem)
     else:
-        result = astar(problem, graph_search=True) #viewer=BaseViewer()
+        result = astar(problem)
     pasos = []
     if result is not None:
         for action, state in result.path():
